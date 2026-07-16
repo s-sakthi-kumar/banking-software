@@ -18,6 +18,10 @@ Task #3:
         store/hosting of git repos and not limited to accessing the repo it provides 
         lot of tools and pipelines as additional features. 
 
-
-this is a sample change
-this is the next change
+Task #4:
+    What do you understand by staging area:
+        This place holds the current changes to one or more files before adding any modifications
+        to the local repo.
+        This might have any previously 
+        untracked files( which are currently tracked using git add <>)
+        and could include new files not in the local repo yet. 
