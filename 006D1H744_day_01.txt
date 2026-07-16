@@ -1,0 +1,19 @@
+Task #1:
+    About Git:
+        It is used to track the changes in the source code/ data and has 
+        the ability to revert changes to a particular version or stage.
+        Free and Open Source.(local)
+
+Task #2:
+    About Github:
+        Used to store Git repos and collaborate with others(includes auth).
+        Testing Pipelines.
+        Has CI/CD capabilities.(actions)
+        Used to integrate with a lot of tools.(like isssue tracking, slack notification)
+        Operated by Microsoft.
+
+Task #3:
+    Github vs Git:
+        Git is a version control solution while Github while utilizing Git is a 
+        store/hosting of git repos and not limited to accessing the repo it provides 
+        lot of tools and pipelines as additional features. 
