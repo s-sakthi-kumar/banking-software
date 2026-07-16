@@ -33,3 +33,10 @@ Task #5:
         This is required to rollback or undo any changes to a particular stage.
         It has different branches to accomodate different developement streams.
 
+
+Task #6:
+    What is fork:
+        This is a Github feature to create a independent copy of any repo with our ownership 
+        with the ability to copy only the default branch or the entire repo.
+        Fork have the ability to creat a pull request to the original repo, to merge
+        this independent repo with the original. 
