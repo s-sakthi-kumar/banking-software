@@ -24,4 +24,11 @@ Task #4:
         to the local repo.
         This might have any previously 
         untracked files( which are currently tracked using git add <>)
-        and could include new files not in the local repo yet. 
+        and could include new files not in the local repo yet.
+
+Task #5:
+    What do you know about version control system:
+        This is a software/solution used track different stages of developement/
+        evolution of the source code. 
+        This is required to rollback or undo any changes to a particular stage.
+        It has different branches to accomodate different developement streams.
