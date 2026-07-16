@@ -33,5 +33,3 @@ Task #5:
         This is required to rollback or undo any changes to a particular stage.
         It has different branches to accomodate different developement streams.
 
-this is only in main branch
-this is only in feature
