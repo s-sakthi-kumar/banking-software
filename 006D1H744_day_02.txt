@@ -1,0 +1,9 @@
+Task #1:
+    Default permission for a newly created file and directory:
+    Directory: drwxr-xr-x
+    File: -rwxr-xr-x
+
+
+Task #2:
+    
+        
