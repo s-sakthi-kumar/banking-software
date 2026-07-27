@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Dependency Check ensures accountHolder must be set -->
+    <bean id="bankAccount" class="com.bank.BankAccount">
+        <property name="accountId" value="101"/>
+        <property name="accountHolder" value="Prasunamba"/>
+    </bean>
+
+    <bean id="customer" class="com.bank.Customer">
+        <property name="name" value="Prasunamba"/>
+        <property name="address">
+            <bean class="com.bank.Address">
+                <property name="city" value="Bengaluru"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Singleton scope -->
+    <bean id="singletonAccount" class="com.bank.BankAccount" scope="singleton">
+        <property name="accountId" value="201"/>
+        <property name="accountHolder" value="Singleton User"/>
+    </bean>
+
+    <!-- Prototype scope -->
+    <bean id="prototypeAccount" class="com.bank.BankAccount" scope="prototype">
+        <property name="accountId" value="202"/>
+        <property name="accountHolder" value="Prototype User"/>
+    </bean>
+
+</beans>
