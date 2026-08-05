@@ -1,0 +1,38 @@
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+
+  <label>Email</label>
+  <input
+    type="email"
+    formControlName="email"
+  />
+
+  @if(email?.touched && email?.invalid)
+  {
+    <p>Email is required and must be valid.</p>
+  }
+
+
+  <br>
+
+
+  <label>Password</label>
+  <input
+    type="password"
+    formControlName="password"
+  />
+
+  @if(password?.touched && password?.invalid)
+  {
+    <p>Password must contain at least 6 characters.</p>
+  }
+
+
+  <br><br>
+
+  <button type="submit">
+    Login
+  </button>
+
+</form>

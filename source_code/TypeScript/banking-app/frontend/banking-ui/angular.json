@@ -55,7 +55,7 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": ["all"]
             },
             "ssr": {
               "entry": "src/server.ts"
@@ -95,7 +95,10 @@
               "buildTarget": "banking-ui:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "allowedHosts": ["all"]
+          }
         }
       }
     }
