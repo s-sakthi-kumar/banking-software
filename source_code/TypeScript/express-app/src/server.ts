@@ -5,9 +5,12 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello from Express + TypeScript!");
+  res.send("Hello world");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT,"0.0.0.0", () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+
+

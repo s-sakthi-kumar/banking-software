@@ -4,3 +4,8 @@ function greet(name) {
 }
 const message = greet("World");
 console.log(message);
+const user = {
+    name: "Alice",
+    age: 25
+};
+console.log(user);
