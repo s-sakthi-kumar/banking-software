@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TransactionService } from './transaction.service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-transaction',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CurrencyPipe],
   template: `
     <h2>Transaction</h2>
 
@@ -21,17 +22,20 @@ import { TransactionService } from './transaction.service';
 
     <button (click)="deposit()">Deposit</button>
     <button (click)="withdraw()">Withdraw</button>
-    @for (item of message; track item) {
-    <li>{{ item }}</li>
+    <ul>
+    @for (item of message; track item; let idx=$index) {
+      <li>{{ item }} Balance:{{ balanceHistory[idx] | currency:'INR' }}</li>
     }
+    </ul>
   `
+
 })
 export class TransactionComponent {
 
   amount = 0;
   balance = 0;
-  message = [''];
-
+  message:string[] = [];
+  balanceHistory:number[] = [];
   constructor(private transactionService: TransactionService) {
     this.balance = this.transactionService.getBalance();
   }
@@ -40,11 +44,13 @@ export class TransactionComponent {
     this.message.push(this.transactionService.deposit(this.amount));
     this.balance = this.transactionService.getBalance();
     this.amount = 0;
+    this.balanceHistory.push(this.balance);
   }
 
   withdraw() {
     this.message.push(this.transactionService.withdraw(this.amount));
     this.balance = this.transactionService.getBalance();
     this.amount = 0;
+    this.balanceHistory.push(this.balance);
   }
 }

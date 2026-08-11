@@ -1,0 +1,39 @@
+<h2>Transaction History</h2>
+
+
+<button (click)="addMoney()">
+ Add Credit
+</button>
+
+
+<table>
+
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Description</th>
+</tr>
+
+
+<tr *ngFor="let t of transactions">
+
+<td>
+{{t.date | date}}
+</td>
+
+<td>
+{{t.type}}
+</td>
+
+<td>
+{{t.amount}}
+</td>
+
+<td>
+{{t.description}}
+</td>
+
+</tr>
+
+</table>
