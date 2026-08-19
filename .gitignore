@@ -5,4 +5,4 @@
 **/dist/
 **/temp/
 *.prefs
-
+.vscode
