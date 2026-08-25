@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+# ─────────────────────────────────────────────
+#  JWT Configuration
+#  Secret must be Base64-encoded and at least
+#  256 bits (32 bytes) for HS256.
+#  Demo value — change in production!
+# ─────────────────────────────────────────────
+jwt:
+  secret: dGhpcy1pcy1hLXZlcnktc2VjcmV0LWtleS1mb3ItaHMyNTYtand0LWRlbW8=
+  expiration-ms: 3600000   # 1 hour
+
+# ─────────────────────────────────────────────
+#  Spring Cloud Gateway Routes
+# ─────────────────────────────────────────────
+spring:
+  cloud:
+    gateway:
+      routes:
+
+        # Public — handled locally by AuthController inside this gateway
+        - id: auth-route
+          uri: http://localhost:8080
+          predicates:
+            - Path=/auth/**
+
+        # Protected — any valid JWT
+        - id: account-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/accounts/**
+
+        # Protected — ROLE_ADMIN only (enforced by JwtAuthFilter)
+        - id: admin-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/admin/**
+
+        # Fallback route (for circuit-breaker demo later)
+        - id: fallback-route
+          uri: http://localhost:8080
+          predicates:
+            - Path=/fallback
+
+logging:
+  level:
+    com.example.gateway: DEBUG
+    org.springframework.cloud.gateway: INFO
