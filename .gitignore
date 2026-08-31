@@ -6,3 +6,15 @@
 **/temp/
 *.prefs
 .vscode
+
+# Terraform
+source_code/Terraform/.terraform/
+source_code/Terraform/*.out
+source_code/Terraform/tfplan*
+source_code/Terraform/*.tfvars
+source_code/Terraform/cred.env
+source_code/Terraform/*.tfstate
+source_code/Terraform/*.tfstate.*
+source_code/Terraform/*.tfstate.backup
+source_code/Terraform/crash.log
+source_code/Terraform/crash.*.log
