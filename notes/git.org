@@ -1,0 +1,17 @@
+* Git Switch vs checkout   ggit switch main	Switch to existing main
+git switch -c feature	Create feature + switch to it
+git branch feature	Create feature, stay where you areit switch main	Switch to existing main
+git switch -c feature	Create feature + switch to it
+git branch feature	Create feature, stay where you are                                                :git:
+  * git switch main	Switch to existing main
+  * git switch -c feature	Create feature + switch to it
+  * git branch feature	Create feature, stay where you are
+  *** git checkout is the older feature 
+
+*  hello 
+- hello 
+- hello 
+
+@begin+src cpp
+hello 
+@end

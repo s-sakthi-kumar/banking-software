@@ -1,0 +1,10 @@
+- name: Configure Alpine servers
+  hosts: servers
+  become: true
+
+  tasks:
+    - name: Create application directory
+      file:
+        path: /opt/myapp
+        state: directory
+        mode: '0755'
